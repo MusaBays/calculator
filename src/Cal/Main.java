@@ -88,24 +88,25 @@ public class Main {
                         throw new ArithmeticException("Ошибка: результат вычисления римскими цифрами не может быть равен 0 или меньше 0");
                     }
 
-                    if (calculation == 100) {
-                        System.out.println("С");
-                    } else if (calculation % 10 == 0) {
-                        int s = calculation / 10;
-                        System.out.print(romanTens.get(s - 1));
-                    } else if (((calculation % 100) / 10) != 0) {
-                        int s = (calculation % 100) / 10;
-                        System.out.print(romanTens.get(s - 1));
-                    }
-                    if (calculation % 10 != 0) {
-                        int ss = calculation % 10;
-                        System.out.println(roman.get(ss - 1));
+                if (calculation == 100) {
+                    System.out.println("С");
+                } else if (calculation % 10 == 0) {
+                    int s = calculation / 10;
+                    System.out.print(romanTens.get(s - 1));
+                } else if (((calculation % 100) / 10) != 0) {
+                    int s = (calculation % 100) / 10;
+                    System.out.print(romanTens.get(s - 1));
+                }
+                if (calculation % 10 != 0) {
+                    int ss = calculation % 10;
+                    System.out.println(roman.get(ss - 1));
 
                     }
                 }
             }
         }
     }
+
 
 
     public static Integer Result(int result1, int result2, String spl) {
